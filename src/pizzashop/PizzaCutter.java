@@ -17,10 +17,19 @@ package pizzashop;
  * @author dancye
  */
 public class PizzaCutter 
-{
-    public int numSlices = 0;// how many pieces to cut the pizza into
-    public PizzaCutter()
+{   private static PizzaCutter instance=null;
+    
+    private int numSlices;// how many pieces to cut the pizza into
+    public PizzaCutter(int numSlices)
     {
-        //intentionally left blank
+       this.numSlices=numSlices; 
     }
+    public static PizzaCutter getInstance(int numSlices){
+    if(instance==null){
+    instance=new PizzaCutter(numSlices);}
+    return instance;
+    }
+@Override
+    public String toString(){
+    return(""+numSlices);}
 }

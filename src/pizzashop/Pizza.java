@@ -11,10 +11,11 @@ import java.util.ArrayList;
  * A class that represents a basic pizza
  * @author dancye
  */
-public class Pizza 
+public class Pizza implements Bake
 {
     public int bakeTemp = 100;//temp to bake at
     private ArrayList<String> ingredients = new ArrayList();
+    @Override
     public void bake(int temp)
     {
         bakeTemp = temp;

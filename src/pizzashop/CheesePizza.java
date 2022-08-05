@@ -8,13 +8,14 @@ package pizzashop;
  * Freeman, E.Freeman, E., Sierra, K., & Bates, B. (2004). Head First Design patterns. Sebastopol, CA: O'Reilly.
  * @author dancye
  */
-public class CheesePizza extends Pizza
+public class CheesePizza extends Pizza implements Bake
 {
     public CheesePizza()
     {
         super();
         super.addTopping("cheese");
     }
+    @Override
     public void bake(int temp)
     {
         super.bakeTemp = temp;
